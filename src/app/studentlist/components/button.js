@@ -1,9 +1,16 @@
 "use client"
 import React from 'react'
 
-const Button = () => {
+
+import {useRouter} from "next/navigation"
+
+const Button = ({id}) => {
+const router  = useRouter();
+
+
+
   return (
-<button onClick={()=>{alert("this is alert")}} className="bg-black text-white p-2 rounded-md">Here</button>
+<button onClick={()=>{ router.push(`/studentlist/${id}`)}} className="bg-black text-white p-2 rounded-md">Here</button>
   )
 }
 

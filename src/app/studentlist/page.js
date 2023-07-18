@@ -23,7 +23,7 @@ products.products.map((item,index)=>{
 <p>{item.id}</p>
 <p>{item.title}</p>
 <p>{item.description}</p>
-<Button/>
+<Button id={item.id}/>
 
             </div>
     )

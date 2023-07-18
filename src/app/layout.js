@@ -1,4 +1,6 @@
 import './globals.css'
+import './temp.css'
+
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,6 +11,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  //this is root file of the nextjs application 
+  //all the changes are rendered in this file in the form of html 
+
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
