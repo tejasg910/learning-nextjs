@@ -1,7 +1,3 @@
-import React, { Suspense } from "react";
-import loading from "./loading";
-import { revalidatePath, revalidateTag } from "next/cache";
-
 const page = async () => {
   const res = await fetch("https://dummyjson.com/users");
   let data = await res.json();
@@ -18,7 +14,7 @@ const page = async () => {
       {data.length > 0 &&
         data.map((item, index) => {
           return (
-            <p>
+            <p key={index}>
               <strong>{item.id}</strong>
             </p>
           );
