@@ -1,10 +1,7 @@
+import Link from "next/link";
+import getUsers from "../../../getUser";
 const page = async () => {
-  const res = await fetch("https://dummyjson.com/users");
-  let data = await res.json();
-  console.log(typeof data.users);
-
-  data = data.users.slice(0, 5);
-
+  const data = await getUsers();
   console.log(data);
   //   const data = [];
   return (
@@ -15,7 +12,9 @@ const page = async () => {
         data.map((item, index) => {
           return (
             <p key={index}>
-              <strong>{item.id}</strong>
+              <strong>
+                <Link href={`user/${item.id}`}>{item.username}</Link>{" "}
+              </strong>
             </p>
           );
         })}

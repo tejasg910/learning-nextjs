@@ -1,8 +1,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 
-import Fonts from "./font/Fonts";
-
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -10,7 +8,6 @@ export default function Home() {
       <Link href={"/productlist"}>Go to products </Link>
       <Link href={"/studentlist"}>Go to Students </Link>
       {/* <Imagecomp /> */}
-      <Fonts />
     </main>
   );
 }
