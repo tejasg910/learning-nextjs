@@ -17,6 +17,10 @@ const nextConfig = {
       },
     ];
   },
+
+  env: {
+    NAME: "TEJASHIAL",
+  },
 };
 
 module.exports = nextConfig;
