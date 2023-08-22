@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(req, { params }) {
   //getting the data from api
 
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
